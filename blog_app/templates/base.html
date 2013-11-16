@@ -1,13 +1,29 @@
 {% load staticfiles %}
 
 <!DOCTYPE html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <title>randomrants</title>
+        {% block css %}
         <link rel="stylesheet" href="{% static "blog_app/css/base.css" %}">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
+        {% endblock %}
     </head>
     <body>
-        {% block content %}
-        {% endblock %}
+        <div id="wrapper">
+            <div id="header">
+                <div class="left">
+                    <a id="title" href="{% url "entry_list" %}">randomrants</a>
+                </div>
+                <div class="right">
+                </div>
+                <div style="clear:both"></div>
+            </div>
+            <div id="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
     </body>
 </html>

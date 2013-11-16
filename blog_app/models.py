@@ -29,6 +29,7 @@ class Entry(models.Model):
     
     def save(self):
         self.content = markdown(self.markdown_content, ['codehilite'])
+        print(self.content)
         if self.language == 'pl':
             self.slug = slugify(self.title.translate(pl_to_en))
         else:
@@ -36,4 +37,4 @@ class Entry(models.Model):
         super(Entry, self).save()
 
     def __unicode__(self):
-        return u'{}'.format(self.title)
+        return unicode(self.title)

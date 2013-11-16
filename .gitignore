@@ -1,3 +1,5 @@
 blog/conf.py
+blog_app/static/blog_app/css/pygments/
+tmp/
 *.pyc
 staticfiles

@@ -7,6 +7,7 @@ from models import Entry
 
 class EntryDetailView(DetailView):
     model = Entry
+    context_object_name = 'entry'
 
 
 class EntryListView(ListView):

@@ -2,6 +2,11 @@
 
 {% block content %}
     {% for entry in entry_list %}
-    <a href="{{ request.META.HTTP_POST }}{{ entry.get_absolute_url }}">{{ entry.title }}</a> 
+    <p>
+        <span class="title"><a href="{{ request.META.HTTP_POST }}{{ entry.get_absolute_url }}">{{ entry.title }}</a>
+        <span class="date">{{ entry.pub_date|date }}</span>
+        </span>
+    </p>
     {% endfor %}
+    <div style="clear:both"></div>
 {% endblock %}

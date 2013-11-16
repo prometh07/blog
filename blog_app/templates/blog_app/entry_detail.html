@@ -1,2 +1,15 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static "blog_app/css/monokai.css" %}">
+{% endblock %}
+
+{% block content %}
+<article>
+    <span class="date">{{ entry.pub_date|date }}</span>
+    <h1>{{ entry.title }}</h1>
+    {{ entry.content|safe }}
+</article>
+{% endblock %}
