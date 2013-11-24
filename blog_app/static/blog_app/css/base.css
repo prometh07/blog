@@ -1,17 +1,106 @@
 @font-face {
 	font-family: header_font;
-	src: url('../fonts/Heuristica-Regular.otf');
+	src: url('../fonts/Heuristica-Regular.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: title_font;
-	src: url('../fonts/Heuristica-Italic.otf');
+	src: url('../fonts/Heuristica-Italic.ttf') format('truetype');
 }
 
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited, a:active {
+    color: #d55a0f;
+}
+
+a:hover {
+    color: #5d6470;
+}
+
+body {
+    background-color: #c0c8c6;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #d55a0f;
+    font-family: title_font;
+}
+
+hr {
+    color: #c0c8c6;
+    background-color: #c0c8c6;
+    border: none;
+    height: 2px;
+    text-align: center;
+}
+
+#content {
+    background-color: #EAEAEA;
+    color: #5d6470;
+    font-family: "Droid Sans";
+    font-size: 16px;
+    padding: 15px;
+    box-shadow: 2px 2px 2px #888888;
+    text-align: left;
+}
+
+#header {
+    font-family: header_font;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+#header a:link, a:visited, a:active {
+    color: #d55a0f;
+}
+
+#header a:hover {
+    color: #5d6470;
+}
+
+#header #title {
+    font-size: 30px;
+    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
+}
+
+#wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-content {
+    line-height: 25px;
+    text-align: justify;
+}
+
+.codehilite {
+    font-size: 13px;
+    padding: 5px 5px 5px 15px;
+    background-color: #393d3c;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+
+.date {
+    color: #5d6470;
+    font-size: 16px;
+    font-family: title_font;
 }
 
 .left {
@@ -22,86 +111,8 @@
     float: right;
 }
 
-body {
-    background-color: #c0c8c6;
-    text-align: center;
-    margin: 0;
-}
-
-#wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-#header {
-    font-family: header_font;
-    padding: 15px;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-#header #title {
-    font-size: 30px;
-    text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
-}
-
-a {
-    text-decoration: none;
-}
-
-#header a:link, a:visited, a:active {
-    color: #d55a0f;
-}
-
-#header a:hover {
-    color: #b5d3ef;
-}
-
-#content {
-    background-color: #e3e3e3;
-    color: #5d6470;
-    font-family: "Droid Sans";
-    font-size: 15px;
-    padding: 15px;
-    text-align: left;
-    box-shadow: 2px 2px 2px #888888;
-}
-
 .title {
     color: #d55a0f;
     font-family: title_font;
     font-size: 20px;
-}
-
-h1 {
-    color: #d55a0f;
-    font-family: title_font;
-}
-
-.date {
-    color: #5d6470;
-    font-size: 15px;
-    font-family: title_font;
-}
-
-
-.title a:link, a:visited, a:active {
-    color: #d55a0f;
-}
-
-.title a:hover {
-    color: #5d6470;
-}
-
-hr {
-    color: #5d6470;
-    background-color: #5d6470;
-    border: none;
-    height: 1px;
-}
-
-.codehilite {
-    font-size: 13px;
-    padding: 5px;
-    background-color: #393d3c;
 }

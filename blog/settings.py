@@ -28,8 +28,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'taggit',
     'blog_app',
+    'disqus',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -89,3 +91,12 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (
     #os.path.join(BASE_DIR, 'blog_app/templates/'),
 )
+
+# disqus
+
+DISQUS_API_KEY = conf.DISQUS_API_KEY
+DISQUS_WEBSITE_SHORTNAME = conf.DISQUS_WEBSITE_SHORTNAME
+
+# Sites framework
+
+SITE_ID = 1

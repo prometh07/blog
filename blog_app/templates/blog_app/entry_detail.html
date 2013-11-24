@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load disqus_tags %}
 
 {% block css %}
     {{ block.super }}
@@ -8,8 +9,14 @@
 
 {% block content %}
 <article>
-    <span class="date">{{ entry.pub_date|date }}</span>
-    <h1>{{ entry.title }}</h1>
-    {{ entry.content|safe }}
+    <header>
+        <span class="date">{{ entry.pub_date|date }}</span>
+        <h1>{{ entry.title }}</h1>
+    </header>
+    <span class="article-content">
+        {{ entry.content|safe }}
+    </span>
 </article>
+<p><hr></p>
+{% disqus_show_comments %}
 {% endblock %}
